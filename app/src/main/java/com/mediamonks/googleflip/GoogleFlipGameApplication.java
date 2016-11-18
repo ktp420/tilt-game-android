@@ -10,7 +10,7 @@ import android.hardware.SensorManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 import com.mediamonks.googleflip.data.models.UserModel;
 import com.mediamonks.googleflip.data.services.DataService;
 import com.mediamonks.googleflip.data.vo.LevelResultVO;
@@ -30,7 +30,7 @@ import org.hitlabnz.sensor_fusion_demo.orientationProvider.RotationVectorProvide
 
 import java.util.List;
 
-import io.fabric.sdk.android.Fabric;
+//import io.fabric.sdk.android.Fabric;
 import temple.core.net.BroadcastReceiver;
 import temple.multiplayer.net.bluetooth.service.AbstractBluetoothService;
 import temple.multiplayer.net.bluetooth.service.BluetoothClientService;
@@ -61,7 +61,7 @@ public class GoogleFlipGameApplication extends Application implements Applicatio
     public void onCreate() {
         super.onCreate();
 
-        Fabric.with(this, new Crashlytics());
+//        Fabric.with(this, new Crashlytics());
 
         sIsLanding = true;
 

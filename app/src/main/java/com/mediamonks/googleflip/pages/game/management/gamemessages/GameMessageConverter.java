@@ -1,6 +1,6 @@
 package com.mediamonks.googleflip.pages.game.management.gamemessages;
 
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 import com.google.gson.Gson;
 import com.mediamonks.googleflip.pages.game.management.gamemessages.c2s.C2SClientNameMessage;
 import com.mediamonks.googleflip.pages.game.management.gamemessages.c2s.C2SRoundFinishedMessage;
@@ -31,7 +31,7 @@ public class GameMessageConverter {
 
         String[] messageParts = message.split("\\" + SEPARATOR);
         if (messageParts.length < 2) {
-            Crashlytics.logException(new Exception("Message could not be split, message = '" + message + "'"));
+//            Crashlytics.logException(new Exception("Message could not be split, message = '" + message + "'"));
             return null;
         }
 
@@ -48,7 +48,7 @@ public class GameMessageConverter {
         try {
             return (GameMessage) sGson.fromJson(jsonPart, sClassMap.get(messageType));
         } catch (Exception e) {
-            Crashlytics.logException(e);
+//            Crashlytics.logException(e);
             return null;
         }
     }
